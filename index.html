@@ -1,509 +1,446 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-
-<title>ARENARIA LLC</title>
-
-<meta name="description"
-content="ARENARIA LLC provides digital products, business resources and curated recommendations.">
-
-<style>
-
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-}
-
-body{
-
-font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
-
-background:#fafafa;
-
-color:#222;
-
-line-height:1.6;
-
-}
-
-.container{
-
-max-width:1100px;
-
-margin:auto;
-
-padding:0 24px;
-
-}
-
-header{
-
-padding:80px 0;
-
-text-align:center;
-
-}
-
-.logo{
-
-font-size:42px;
-
-font-weight:700;
-
-letter-spacing:4px;
-
-}
-
-.tagline{
-
-font-size:22px;
-
-margin-top:18px;
-
-color:#555;
-
-}
-
-.subtitle{
-
-max-width:700px;
-
-margin:30px auto;
-
-font-size:18px;
-
-color:#666;
-
-}
-
-.btn{
-
-display:inline-block;
-
-padding:14px 28px;
-
-background:#111;
-
-color:white;
-
-text-decoration:none;
-
-border-radius:10px;
-
-margin-top:15px;
-
-transition:0.2s;
-
-}
-
-.btn:hover{
-
-opacity:.85;
-
-}
-
-section{
-
-padding:70px 0;
-
-}
-
-.section-title{
-
-font-size:34px;
-
-margin-bottom:40px;
-
-text-align:center;
-
-}
-
-.grid{
-
-display:grid;
-
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-
-gap:25px;
-
-}
-
-.card{
-
-background:white;
-
-padding:30px;
-
-border-radius:16px;
-
-box-shadow:0 5px 20px rgba(0,0,0,.08);
-
-}
-
-.card h3{
-
-margin-bottom:15px;
-
-}
-
-.card p{
-
-color:#666;
-
-margin-bottom:20px;
-
-}
-
-.link-btn{
-
-display:inline-block;
-
-padding:10px 18px;
-
-border:1px solid #111;
-
-border-radius:8px;
-
-text-decoration:none;
-
-color:#111;
-
-}
-
-.link-btn:hover{
-
-background:#111;
-
-color:white;
-
-}
-
-.about{
-
-max-width:800px;
-
-margin:auto;
-
-text-align:center;
-
-font-size:18px;
-
-color:#555;
-
-}
-
-footer{
-
-padding:60px 0;
-
-text-align:center;
-
-border-top:1px solid #ddd;
-
-}
-
-.email{
-
-font-size:18px;
-
-margin:15px 0;
-
-}
-
-.small{
-
-color:#888;
-
-font-size:14px;
-
-}
-
-</style>
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Arenaria Design — Print on Demand Store</title>
+  <meta name="description" content="Arenaria Design — Original artwork on t-shirts, mugs, posters and phone cases. Designed with intention, shipped to your door.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --ink:    #1a1a1a;
+      --sand:   #f5f0e8;
+      --clay:   #c9a87c;
+      --mist:   #e8e2d8;
+      --white:  #ffffff;
+      --mid:    #888;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--sand);
+      color: var(--ink);
+      line-height: 1.6;
+    }
+
+    /* NAV */
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 22px 48px;
+      background: var(--white);
+      border-bottom: 1px solid var(--mist);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .nav-logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 22px;
+      letter-spacing: 1px;
+      color: var(--ink);
+      text-decoration: none;
+    }
+    .nav-links {
+      display: flex;
+      gap: 32px;
+      list-style: none;
+    }
+    .nav-links a {
+      text-decoration: none;
+      color: var(--ink);
+      font-size: 14px;
+      font-weight: 500;
+      letter-spacing: 0.5px;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--clay); }
+
+    /* HERO */
+    .hero {
+      min-height: 80vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 80px 24px;
+      background: var(--white);
+    }
+    .hero-inner { max-width: 700px; }
+    .hero-eyebrow {
+      font-size: 12px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--clay);
+      margin-bottom: 24px;
+    }
+    .hero-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(42px, 6vw, 76px);
+      line-height: 1.1;
+      color: var(--ink);
+      margin-bottom: 24px;
+    }
+    .hero-title span {
+      color: var(--clay);
+      font-style: italic;
+    }
+    .hero-sub {
+      font-size: 17px;
+      color: #555;
+      max-width: 520px;
+      margin: 0 auto 40px;
+      font-weight: 300;
+    }
+    .btn-primary {
+      display: inline-block;
+      padding: 14px 36px;
+      background: var(--ink);
+      color: var(--white);
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 500;
+      letter-spacing: 1px;
+      border-radius: 2px;
+      transition: background 0.2s;
+    }
+    .btn-primary:hover { background: var(--clay); }
+
+    /* SECTION COMMON */
+    section { padding: 90px 48px; }
+    .section-label {
+      font-size: 11px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--clay);
+      margin-bottom: 12px;
+    }
+    .section-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(28px, 4vw, 44px);
+      margin-bottom: 48px;
+      color: var(--ink);
+    }
+
+    /* PRODUCTS */
+    .products { background: var(--sand); }
+    .products-header { text-align: center; }
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 28px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    .product-card {
+      background: var(--white);
+      border-radius: 4px;
+      overflow: hidden;
+      transition: transform 0.25s, box-shadow 0.25s;
+    }
+    .product-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 40px rgba(0,0,0,0.10);
+    }
+    .product-img {
+      width: 100%;
+      aspect-ratio: 1;
+      background: var(--mist);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 10px;
+      color: var(--mid);
+      font-size: 13px;
+    }
+    .product-img svg { opacity: 0.35; }
+    .product-info { padding: 20px; }
+    .product-name {
+      font-family: 'Playfair Display', serif;
+      font-size: 18px;
+      margin-bottom: 6px;
+    }
+    .product-desc {
+      font-size: 13px;
+      color: #666;
+      margin-bottom: 16px;
+      line-height: 1.5;
+    }
+    .product-price {
+      font-size: 15px;
+      font-weight: 500;
+      color: var(--clay);
+      margin-bottom: 14px;
+    }
+    .btn-shop {
+      display: inline-block;
+      padding: 9px 20px;
+      border: 1.5px solid var(--ink);
+      border-radius: 2px;
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--ink);
+      text-decoration: none;
+      letter-spacing: 0.5px;
+      transition: 0.2s;
+    }
+    .btn-shop:hover { background: var(--ink); color: var(--white); }
+
+    /* ABOUT */
+    .about {
+      background: var(--ink);
+      color: var(--white);
+      display: flex;
+      align-items: center;
+      gap: 80px;
+      max-width: 100%;
+    }
+    .about-text { max-width: 600px; margin: 0 auto; }
+    .about .section-label { color: var(--clay); }
+    .about .section-title { color: var(--white); margin-bottom: 20px; }
+    .about p {
+      font-size: 16px;
+      color: #aaa;
+      line-height: 1.8;
+      font-weight: 300;
+    }
+
+    /* HOW IT WORKS */
+    .how { background: var(--white); text-align: center; }
+    .how-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 40px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    .how-step { }
+    .how-num {
+      font-family: 'Playfair Display', serif;
+      font-size: 48px;
+      color: var(--mist);
+      line-height: 1;
+      margin-bottom: 12px;
+    }
+    .how-step h3 {
+      font-size: 16px;
+      font-weight: 500;
+      margin-bottom: 8px;
+    }
+    .how-step p { font-size: 14px; color: #666; }
+
+    /* ETSY BANNER */
+    .etsy-banner {
+      background: var(--clay);
+      color: var(--white);
+      text-align: center;
+      padding: 60px 24px;
+    }
+    .etsy-banner h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 32px;
+      margin-bottom: 12px;
+    }
+    .etsy-banner p { font-size: 16px; margin-bottom: 28px; opacity: 0.9; }
+    .btn-etsy {
+      display: inline-block;
+      padding: 14px 36px;
+      background: var(--white);
+      color: var(--ink);
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 600;
+      border-radius: 2px;
+      letter-spacing: 0.5px;
+      transition: opacity 0.2s;
+    }
+    .btn-etsy:hover { opacity: 0.85; }
+
+    /* FOOTER */
+    footer {
+      background: var(--ink);
+      color: #aaa;
+      text-align: center;
+      padding: 48px 24px;
+      font-size: 14px;
+    }
+    footer .footer-logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 20px;
+      color: var(--white);
+      margin-bottom: 16px;
+    }
+    footer a { color: var(--clay); text-decoration: none; }
+    footer .copy { margin-top: 20px; font-size: 12px; color: #555; }
+
+    /* RESPONSIVE */
+    @media (max-width: 640px) {
+      nav { padding: 16px 20px; }
+      .nav-links { gap: 16px; }
+      section { padding: 60px 20px; }
+      .about { flex-direction: column; gap: 0; }
+    }
+  </style>
 </head>
-
 <body>
 
-
-<header>
-
-<div class="container">
-
-<div class="logo">
-
-ARENARIA LLC
-
-</div>
-
-<div class="tagline">
-
-Business Solutions • Digital Products • Curated Resources
-
-</div>
-
-<div class="subtitle">
-
-ARENARIA LLC provides selected digital tools, business resources and practical solutions for professionals, entrepreneurs and modern businesses.
-
-</div>
-
-<a class="btn" href="#products">
-
-Explore Products
-
-</a>
-
-</div>
-
-</header>
-
-
-
-<section>
-
-<div class="container">
-
-<h2 class="section-title">
-
-About Us
-
-</h2>
-
-<div class="about">
-
-We build and recommend practical products, digital resources and business tools that help individuals and companies work more efficiently.
-
-Our mission is to simplify everyday business operations through carefully selected solutions.
-
-</div>
-
-</div>
-
-</section>
-
-
-
-
-<section id="products">
-
-<div class="container">
-
-<h2 class="section-title">
-
-Featured Products
-
-</h2>
-
-<div class="grid">
-
-
-
-<div class="card">
-
-<h3>
-
-Business Starter Toolkit
-
-</h3>
-
-<p>
-
-A curated collection of templates and resources designed for new businesses and entrepreneurs.
-
-</p>
-
-<a href="#" class="link-btn">
-
-View Product
-
-</a>
-
-</div>
-
-
-
-
-<div class="card">
-
-<h3>
-
-AI Automation Templates
-
-</h3>
-
-<p>
-
-Ready-to-use productivity templates that help automate repetitive tasks.
-
-</p>
-
-<a href="#" class="link-btn">
-
-View Product
-
-</a>
-
-</div>
-
-
-
-
-<div class="card">
-
-<h3>
-
-Digital Resource Library
-
-</h3>
-
-<p>
-
-Guides, documents and practical materials for modern professionals.
-
-</p>
-
-<a href="#" class="link-btn">
-
-View Product
-
-</a>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-
-
-
-
-<section>
-
-<div class="container">
-
-<h2 class="section-title">
-
-Recommended Tools
-
-</h2>
-
-<div class="grid">
-
-<div class="card">
-
-<h3>
-
-ChatGPT
-
-</h3>
-
-<p>
-
-AI assistant for writing, research and productivity.
-
-</p>
-
-<a href="#" class="link-btn">
-
-Learn More
-
-</a>
-
-</div>
-
-
-
-<div class="card">
-
-<h3>
-
-Notion
-
-</h3>
-
-<p>
-
-Workspace for notes, documentation and project management.
-
-</p>
-
-<a href="#" class="link-btn">
-
-Learn More
-
-</a>
-
-</div>
-
-
-
-<div class="card">
-
-<h3>
-
-Canva
-
-</h3>
-
-<p>
-
-Easy design platform for presentations, marketing and social content.
-
-</p>
-
-<a href="#" class="link-btn">
-
-Learn More
-
-</a>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-
-
-
-<footer>
-
-<div class="container">
-
-<h2>
-
-Contact
-
-</h2>
-
-<div class="email">
-
-info@yourdomain.com
-
-</div>
-
-<div class="small">
-
-© 2026 ARENARIA LLC
-
-All Rights Reserved.
-
-</div>
-
-</div>
-
-</footer>
+  <!-- NAV -->
+  <nav>
+    <a href="#" class="nav-logo">Arenaria Design</a>
+    <ul class="nav-links">
+      <li><a href="#products">Shop</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-inner">
+      <p class="hero-eyebrow">Print on Demand · Designed with intention</p>
+      <h1 class="hero-title">Wear the art.<br><span>Own the feeling.</span></h1>
+      <p class="hero-sub">Original designs on premium t-shirts, mugs, posters and phone cases — made to order, shipped worldwide.</p>
+      <a href="#products" class="btn-primary">Shop the Collection</a>
+    </div>
+  </section>
+
+  <!-- PRODUCTS -->
+  <section class="products" id="products">
+    <div class="products-header">
+      <p class="section-label">Our Products</p>
+      <h2 class="section-title">The Collection</h2>
+    </div>
+    <div class="products-grid">
+
+      <!-- T-Shirt -->
+      <div class="product-card">
+        <div class="product-img">
+          <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M6 12L14 8H20C20 8 20 12 24 12C28 12 28 8 28 8H34L42 12L38 20L34 16V40H14V16L10 20L6 12Z" stroke="#888" stroke-width="2" fill="none"/>
+          </svg>
+          <span>Photo coming soon</span>
+        </div>
+        <div class="product-info">
+          <h3 class="product-name">Graphic T-Shirt</h3>
+          <p class="product-desc">Premium cotton tee with original Arenaria artwork. Unisex fit, true to size.</p>
+          <div class="product-price">From $28</div>
+          <a href="#" class="btn-shop">Coming Soon</a>
+        </div>
+      </div>
+
+      <!-- Mug -->
+      <div class="product-card">
+        <div class="product-img">
+          <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="8" y="14" width="24" height="26" rx="2" stroke="#888" stroke-width="2" fill="none"/>
+            <path d="M32 20H38C40.2 20 42 21.8 42 24C42 26.2 40.2 28 38 28H32" stroke="#888" stroke-width="2"/>
+            <line x1="8" y1="34" x2="32" y2="34" stroke="#888" stroke-width="2"/>
+          </svg>
+          <span>Photo coming soon</span>
+        </div>
+        <div class="product-info">
+          <h3 class="product-name">Ceramic Mug</h3>
+          <p class="product-desc">11oz ceramic mug with wrap-around print. Dishwasher safe, microwave friendly.</p>
+          <div class="product-price">From $18</div>
+          <a href="#" class="btn-shop">Coming Soon</a>
+        </div>
+      </div>
+
+      <!-- Poster -->
+      <div class="product-card">
+        <div class="product-img">
+          <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="10" y="6" width="28" height="36" rx="2" stroke="#888" stroke-width="2" fill="none"/>
+            <line x1="16" y1="16" x2="32" y2="16" stroke="#888" stroke-width="2"/>
+            <line x1="16" y1="22" x2="32" y2="22" stroke="#888" stroke-width="2"/>
+            <line x1="16" y1="28" x2="24" y2="28" stroke="#888" stroke-width="2"/>
+          </svg>
+          <span>Photo coming soon</span>
+        </div>
+        <div class="product-info">
+          <h3 class="product-name">Art Poster</h3>
+          <p class="product-desc">Museum-quality matte print on 200gsm paper. Available in multiple sizes.</p>
+          <div class="product-price">From $22</div>
+          <a href="#" class="btn-shop">Coming Soon</a>
+        </div>
+      </div>
+
+      <!-- Phone Case -->
+      <div class="product-card">
+        <div class="product-img">
+          <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="13" y="4" width="22" height="40" rx="4" stroke="#888" stroke-width="2" fill="none"/>
+            <circle cx="24" cy="39" r="2" stroke="#888" stroke-width="1.5" fill="none"/>
+            <line x1="20" y1="8" x2="28" y2="8" stroke="#888" stroke-width="2"/>
+          </svg>
+          <span>Photo coming soon</span>
+        </div>
+        <div class="product-info">
+          <h3 class="product-name">Phone Case</h3>
+          <p class="product-desc">Slim, lightweight case with vivid print. Compatible with iPhone and Samsung models.</p>
+          <div class="product-price">From $20</div>
+          <a href="#" class="btn-shop">Coming Soon</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about" id="about">
+    <div class="about-text">
+      <p class="section-label">About Us</p>
+      <h2 class="section-title">Design first,<br>everything else follows.</h2>
+      <p>Arenaria Design is a print on demand brand focused on original artwork and thoughtful design. Every piece starts as an idea — a pattern, an illustration, a feeling — and ends up on a product you can actually use and wear.<br><br>We design, you order, it gets made fresh and shipped directly to you. No inventory, no waste, just good design on quality products.</p>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section class="how">
+    <p class="section-label">How It Works</p>
+    <h2 class="section-title">Simple by design</h2>
+    <div class="how-grid">
+      <div class="how-step">
+        <div class="how-num">01</div>
+        <h3>Browse & Choose</h3>
+        <p>Explore our collection and pick a design you love.</p>
+      </div>
+      <div class="how-step">
+        <div class="how-num">02</div>
+        <h3>Order on Etsy</h3>
+        <p>Secure checkout through our Etsy store — trusted by millions.</p>
+      </div>
+      <div class="how-step">
+        <div class="how-num">03</div>
+        <h3>Printed Fresh</h3>
+        <p>Your item is printed to order and shipped directly to your door.</p>
+      </div>
+      <div class="how-step">
+        <div class="how-num">04</div>
+        <h3>Enjoy</h3>
+        <p>Quality guaranteed. Not happy? We'll make it right.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ETSY BANNER -->
+  <div class="etsy-banner">
+    <h2>Find us on Etsy</h2>
+    <p>All orders are placed through our Etsy store — safe, simple and trusted.</p>
+    <a href="#" class="btn-etsy">Visit Our Etsy Shop</a>
+  </div>
+
+  <!-- FOOTER -->
+  <footer id="contact">
+    <div class="footer-logo">Arenaria Design</div>
+    <p>Questions? Reach us at <a href="mailto:info@arenarya.com">info@arenarya.com</a></p>
+    <p class="copy">© 2026 Arenaria Design — ARENARIA LLC. All rights reserved.</p>
+  </footer>
 
 </body>
-
 </html>
