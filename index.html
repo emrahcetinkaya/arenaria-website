@@ -11,12 +11,12 @@
     *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
     :root {
-      --ink:    #1a1a1a;
-      --sand:   #f5f0e8;
-      --clay:   #c9a87c;
-      --mist:   #e8e2d8;
-      --white:  #ffffff;
-      --mid:    #888;
+      --ink:   #1a1a1a;
+      --sand:  #f5f0e8;
+      --clay:  #c9a87c;
+      --mist:  #e8e2d8;
+      --white: #ffffff;
+      --mid:   #888;
     }
 
     body {
@@ -45,11 +45,7 @@
       color: var(--ink);
       text-decoration: none;
     }
-    .nav-links {
-      display: flex;
-      gap: 32px;
-      list-style: none;
-    }
+    .nav-links { display: flex; gap: 32px; list-style: none; }
     .nav-links a {
       text-decoration: none;
       color: var(--ink);
@@ -85,10 +81,7 @@
       color: var(--ink);
       margin-bottom: 24px;
     }
-    .hero-title span {
-      color: var(--clay);
-      font-style: italic;
-    }
+    .hero-title span { color: var(--clay); font-style: italic; }
     .hero-sub {
       font-size: 17px;
       color: #555;
@@ -110,7 +103,7 @@
     }
     .btn-primary:hover { background: var(--clay); }
 
-    /* SECTION COMMON */
+    /* SECTIONS */
     section { padding: 90px 48px; }
     .section-label {
       font-size: 11px;
@@ -131,9 +124,9 @@
     .products-header { text-align: center; }
     .products-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 28px;
-      max-width: 1100px;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 24px;
+      max-width: 1200px;
       margin: 0 auto;
     }
     .product-card {
@@ -159,27 +152,17 @@
       font-size: 13px;
     }
     .product-img svg { opacity: 0.35; }
-    .product-info { padding: 20px; }
+    .product-info { padding: 18px; }
     .product-name {
       font-family: 'Playfair Display', serif;
-      font-size: 18px;
+      font-size: 17px;
       margin-bottom: 6px;
     }
-    .product-desc {
-      font-size: 13px;
-      color: #666;
-      margin-bottom: 16px;
-      line-height: 1.5;
-    }
-    .product-price {
-      font-size: 15px;
-      font-weight: 500;
-      color: var(--clay);
-      margin-bottom: 14px;
-    }
+    .product-desc { font-size: 13px; color: #666; margin-bottom: 14px; line-height: 1.5; }
+    .product-price { font-size: 15px; font-weight: 500; color: var(--clay); margin-bottom: 12px; }
     .btn-shop {
       display: inline-block;
-      padding: 9px 20px;
+      padding: 8px 18px;
       border: 1.5px solid var(--ink);
       border-radius: 2px;
       font-size: 13px;
@@ -195,20 +178,38 @@
     .about {
       background: var(--ink);
       color: var(--white);
+    }
+    .about-inner {
+      max-width: 860px;
+      margin: 0 auto;
+    }
+    .about .section-label { color: var(--clay); }
+    .about .section-title { color: var(--white); margin-bottom: 24px; }
+    .about-body { font-size: 16px; color: #bbb; line-height: 1.9; font-weight: 300; }
+    .about-owner {
+      margin-top: 36px;
+      padding-top: 28px;
+      border-top: 1px solid #333;
       display: flex;
       align-items: center;
-      gap: 80px;
-      max-width: 100%;
+      gap: 20px;
     }
-    .about-text { max-width: 600px; margin: 0 auto; }
-    .about .section-label { color: var(--clay); }
-    .about .section-title { color: var(--white); margin-bottom: 20px; }
-    .about p {
-      font-size: 16px;
-      color: #aaa;
-      line-height: 1.8;
-      font-weight: 300;
+    .owner-avatar {
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      background: #333;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Playfair Display', serif;
+      font-size: 22px;
+      color: var(--clay);
+      flex-shrink: 0;
     }
+    .owner-info { }
+    .owner-name { color: var(--white); font-weight: 500; font-size: 15px; }
+    .owner-title { color: #777; font-size: 13px; margin-top: 3px; }
 
     /* HOW IT WORKS */
     .how { background: var(--white); text-align: center; }
@@ -219,7 +220,6 @@
       max-width: 900px;
       margin: 0 auto;
     }
-    .how-step { }
     .how-num {
       font-family: 'Playfair Display', serif;
       font-size: 48px;
@@ -227,11 +227,7 @@
       line-height: 1;
       margin-bottom: 12px;
     }
-    .how-step h3 {
-      font-size: 16px;
-      font-weight: 500;
-      margin-bottom: 8px;
-    }
+    .how-step h3 { font-size: 16px; font-weight: 500; margin-bottom: 8px; }
     .how-step p { font-size: 14px; color: #666; }
 
     /* ETSY BANNER */
@@ -261,29 +257,54 @@
     }
     .btn-etsy:hover { opacity: 0.85; }
 
+    /* CONTACT */
+    .contact-section { background: var(--sand); }
+    .contact-inner {
+      max-width: 700px;
+      margin: 0 auto;
+    }
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 32px;
+      margin-top: 0;
+    }
+    .contact-item h4 {
+      font-size: 11px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--clay);
+      margin-bottom: 8px;
+    }
+    .contact-item p, .contact-item a {
+      font-size: 15px;
+      color: #444;
+      line-height: 1.7;
+      text-decoration: none;
+    }
+    .contact-item a:hover { color: var(--clay); }
+
     /* FOOTER */
     footer {
       background: var(--ink);
       color: #aaa;
       text-align: center;
-      padding: 48px 24px;
+      padding: 40px 24px;
       font-size: 14px;
     }
-    footer .footer-logo {
+    .footer-logo {
       font-family: 'Playfair Display', serif;
       font-size: 20px;
       color: var(--white);
-      margin-bottom: 16px;
+      margin-bottom: 12px;
     }
-    footer a { color: var(--clay); text-decoration: none; }
-    footer .copy { margin-top: 20px; font-size: 12px; color: #555; }
+    .copy { margin-top: 16px; font-size: 12px; color: #555; }
 
     /* RESPONSIVE */
     @media (max-width: 640px) {
       nav { padding: 16px 20px; }
       .nav-links { gap: 16px; }
       section { padding: 60px 20px; }
-      .about { flex-direction: column; gap: 0; }
     }
   </style>
 </head>
@@ -317,73 +338,128 @@
     </div>
     <div class="products-grid">
 
-      <!-- T-Shirt -->
+      <!-- T-Shirt Classic -->
       <div class="product-card">
         <div class="product-img">
-          <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M6 12L14 8H20C20 8 20 12 24 12C28 12 28 8 28 8H34L42 12L38 20L34 16V40H14V16L10 20L6 12Z" stroke="#888" stroke-width="2" fill="none"/>
-          </svg>
+          <svg width="44" height="44" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 12L14 8H20C20 8 20 12 24 12C28 12 28 8 28 8H34L42 12L38 20L34 16V40H14V16L10 20L6 12Z" stroke="#888" stroke-width="2" fill="none"/></svg>
           <span>Photo coming soon</span>
         </div>
         <div class="product-info">
-          <h3 class="product-name">Graphic T-Shirt</h3>
-          <p class="product-desc">Premium cotton tee with original Arenaria artwork. Unisex fit, true to size.</p>
+          <h3 class="product-name">Classic Graphic Tee</h3>
+          <p class="product-desc">Premium unisex cotton t-shirt with original Arenaria artwork. True to size.</p>
           <div class="product-price">From $28</div>
           <a href="#" class="btn-shop">Coming Soon</a>
         </div>
       </div>
 
-      <!-- Mug -->
+      <!-- T-Shirt Oversized -->
       <div class="product-card">
         <div class="product-img">
-          <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect x="8" y="14" width="24" height="26" rx="2" stroke="#888" stroke-width="2" fill="none"/>
-            <path d="M32 20H38C40.2 20 42 21.8 42 24C42 26.2 40.2 28 38 28H32" stroke="#888" stroke-width="2"/>
-            <line x1="8" y1="34" x2="32" y2="34" stroke="#888" stroke-width="2"/>
-          </svg>
+          <svg width="44" height="44" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 13L13 8H20C20 8 20 13 24 13C28 13 28 8 28 8H35L44 13L39 22L35 17V40H13V17L9 22L4 13Z" stroke="#888" stroke-width="2" fill="none"/></svg>
           <span>Photo coming soon</span>
         </div>
         <div class="product-info">
-          <h3 class="product-name">Ceramic Mug</h3>
-          <p class="product-desc">11oz ceramic mug with wrap-around print. Dishwasher safe, microwave friendly.</p>
+          <h3 class="product-name">Oversized Art Tee</h3>
+          <p class="product-desc">Relaxed oversized fit with bold print. Perfect for casual, everyday wear.</p>
+          <div class="product-price">From $32</div>
+          <a href="#" class="btn-shop">Coming Soon</a>
+        </div>
+      </div>
+
+      <!-- Mug Classic -->
+      <div class="product-card">
+        <div class="product-img">
+          <svg width="44" height="44" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="8" y="14" width="24" height="26" rx="2" stroke="#888" stroke-width="2" fill="none"/><path d="M32 20H38C40.2 20 42 21.8 42 24C42 26.2 40.2 28 38 28H32" stroke="#888" stroke-width="2"/><line x1="8" y1="34" x2="32" y2="34" stroke="#888" stroke-width="2"/></svg>
+          <span>Photo coming soon</span>
+        </div>
+        <div class="product-info">
+          <h3 class="product-name">Ceramic Mug 11oz</h3>
+          <p class="product-desc">Classic 11oz ceramic mug with wrap-around print. Dishwasher safe.</p>
           <div class="product-price">From $18</div>
           <a href="#" class="btn-shop">Coming Soon</a>
         </div>
       </div>
 
-      <!-- Poster -->
+      <!-- Mug Large -->
       <div class="product-card">
         <div class="product-img">
-          <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect x="10" y="6" width="28" height="36" rx="2" stroke="#888" stroke-width="2" fill="none"/>
-            <line x1="16" y1="16" x2="32" y2="16" stroke="#888" stroke-width="2"/>
-            <line x1="16" y1="22" x2="32" y2="22" stroke="#888" stroke-width="2"/>
-            <line x1="16" y1="28" x2="24" y2="28" stroke="#888" stroke-width="2"/>
-          </svg>
+          <svg width="44" height="44" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="6" y="12" width="28" height="28" rx="2" stroke="#888" stroke-width="2" fill="none"/><path d="M34 18H40C42.2 18 44 19.8 44 22C44 24.2 42.2 26 40 26H34" stroke="#888" stroke-width="2"/></svg>
           <span>Photo coming soon</span>
         </div>
         <div class="product-info">
-          <h3 class="product-name">Art Poster</h3>
-          <p class="product-desc">Museum-quality matte print on 200gsm paper. Available in multiple sizes.</p>
+          <h3 class="product-name">Large Latte Mug 15oz</h3>
+          <p class="product-desc">Extra-large 15oz mug for big mornings. Microwave and dishwasher friendly.</p>
           <div class="product-price">From $22</div>
           <a href="#" class="btn-shop">Coming Soon</a>
         </div>
       </div>
 
-      <!-- Phone Case -->
+      <!-- Poster A3 -->
       <div class="product-card">
         <div class="product-img">
-          <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect x="13" y="4" width="22" height="40" rx="4" stroke="#888" stroke-width="2" fill="none"/>
-            <circle cx="24" cy="39" r="2" stroke="#888" stroke-width="1.5" fill="none"/>
-            <line x1="20" y1="8" x2="28" y2="8" stroke="#888" stroke-width="2"/>
-          </svg>
+          <svg width="44" height="44" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="10" y="4" width="28" height="40" rx="2" stroke="#888" stroke-width="2" fill="none"/><line x1="16" y1="14" x2="32" y2="14" stroke="#888" stroke-width="2"/><line x1="16" y1="20" x2="32" y2="20" stroke="#888" stroke-width="2"/><line x1="16" y1="26" x2="24" y2="26" stroke="#888" stroke-width="2"/></svg>
           <span>Photo coming soon</span>
         </div>
         <div class="product-info">
-          <h3 class="product-name">Phone Case</h3>
-          <p class="product-desc">Slim, lightweight case with vivid print. Compatible with iPhone and Samsung models.</p>
+          <h3 class="product-name">Art Poster — A3</h3>
+          <p class="product-desc">Museum-quality matte print on thick 200gsm paper. Ready to frame.</p>
+          <div class="product-price">From $22</div>
+          <a href="#" class="btn-shop">Coming Soon</a>
+        </div>
+      </div>
+
+      <!-- Poster A2 -->
+      <div class="product-card">
+        <div class="product-img">
+          <svg width="44" height="44" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="8" y="3" width="32" height="42" rx="2" stroke="#888" stroke-width="2" fill="none"/><line x1="14" y1="12" x2="34" y2="12" stroke="#888" stroke-width="2"/><line x1="14" y1="18" x2="34" y2="18" stroke="#888" stroke-width="2"/></svg>
+          <span>Photo coming soon</span>
+        </div>
+        <div class="product-info">
+          <h3 class="product-name">Statement Poster — A2</h3>
+          <p class="product-desc">Large format A2 wall art. Bold, vivid colours that don't fade.</p>
+          <div class="product-price">From $30</div>
+          <a href="#" class="btn-shop">Coming Soon</a>
+        </div>
+      </div>
+
+      <!-- Phone Case Standard -->
+      <div class="product-card">
+        <div class="product-img">
+          <svg width="44" height="44" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="13" y="4" width="22" height="40" rx="4" stroke="#888" stroke-width="2" fill="none"/><circle cx="24" cy="39" r="2" stroke="#888" stroke-width="1.5" fill="none"/><line x1="20" y1="8" x2="28" y2="8" stroke="#888" stroke-width="2"/></svg>
+          <span>Photo coming soon</span>
+        </div>
+        <div class="product-info">
+          <h3 class="product-name">Snap Phone Case</h3>
+          <p class="product-desc">Slim, lightweight case with vivid full-print design. iPhone & Samsung.</p>
           <div class="product-price">From $20</div>
+          <a href="#" class="btn-shop">Coming Soon</a>
+        </div>
+      </div>
+
+      <!-- Phone Case Tough -->
+      <div class="product-card">
+        <div class="product-img">
+          <svg width="44" height="44" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="11" y="3" width="26" height="42" rx="5" stroke="#888" stroke-width="2" fill="none"/><rect x="14" y="6" width="20" height="36" rx="3" stroke="#888" stroke-width="1" fill="none"/><circle cx="24" cy="40" r="1.5" stroke="#888" stroke-width="1.5" fill="none"/></svg>
+          <span>Photo coming soon</span>
+        </div>
+        <div class="product-info">
+          <h3 class="product-name">Tough Phone Case</h3>
+          <p class="product-desc">Dual-layer drop-protection with the same great print. iPhone & Samsung.</p>
+          <div class="product-price">From $26</div>
+          <a href="#" class="btn-shop">Coming Soon</a>
+        </div>
+      </div>
+
+      <!-- Tote Bag -->
+      <div class="product-card">
+        <div class="product-img">
+          <svg width="44" height="44" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10 18H38L35 42H13L10 18Z" stroke="#888" stroke-width="2" fill="none"/><path d="M18 18C18 14 20 10 24 10C28 10 30 14 30 18" stroke="#888" stroke-width="2" fill="none"/></svg>
+          <span>Photo coming soon</span>
+        </div>
+        <div class="product-info">
+          <h3 class="product-name">Canvas Tote Bag</h3>
+          <p class="product-desc">Sturdy cotton canvas tote with original print. Great for everyday errands.</p>
+          <div class="product-price">From $24</div>
           <a href="#" class="btn-shop">Coming Soon</a>
         </div>
       </div>
@@ -393,10 +469,23 @@
 
   <!-- ABOUT -->
   <section class="about" id="about">
-    <div class="about-text">
+    <div class="about-inner">
       <p class="section-label">About Us</p>
-      <h2 class="section-title">Design first,<br>everything else follows.</h2>
-      <p>Arenaria Design is a print on demand brand focused on original artwork and thoughtful design. Every piece starts as an idea — a pattern, an illustration, a feeling — and ends up on a product you can actually use and wear.<br><br>We design, you order, it gets made fresh and shipped directly to you. No inventory, no waste, just good design on quality products.</p>
+      <h2 class="section-title">Decades in retail.<br>Fresh eyes on design.</h2>
+      <div class="about-body">
+        <p>Arenaria Design was born from a simple idea: that good taste built over years in retail can translate into something people actually want to wear and live with.</p>
+        <br>
+        <p>Our team brings long experience from the physical retail world — understanding what people want, what catches the eye on a shelf, and what lasts beyond a trend. We're newcomers to e-commerce, and we embrace that. It keeps us curious, deliberate, and close to what our customers actually need.</p>
+        <br>
+        <p>Every product we release starts as a genuine design decision — a colour, a shape, a feeling — then gets printed fresh to order and shipped directly to you. No warehouses. No excess. Just thoughtful design on quality products.</p>
+      </div>
+      <div class="about-owner">
+        <div class="owner-avatar">S</div>
+        <div class="owner-info">
+          <div class="owner-name">Suleyman Emrah Cetinkaya</div>
+          <div class="owner-title">Founder & Designer — Arenaria Design / ARENARIA LLC</div>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -435,11 +524,32 @@
     <a href="#" class="btn-etsy">Visit Our Etsy Shop</a>
   </div>
 
+  <!-- CONTACT -->
+  <section class="contact-section" id="contact">
+    <div class="contact-inner">
+      <p class="section-label">Get in Touch</p>
+      <h2 class="section-title">Contact Us</h2>
+      <div class="contact-grid">
+        <div class="contact-item">
+          <h4>Company</h4>
+          <p>ARENARIA LLC<br>Arenaria Design</p>
+        </div>
+        <div class="contact-item">
+          <h4>Email</h4>
+          <a href="mailto:contact@arenarya.com">contact@arenarya.com</a>
+        </div>
+        <div class="contact-item">
+          <h4>Address</h4>
+          <p>30 N Gould St Ste 26627<br>Sheridan, WY 82801<br>United States</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- FOOTER -->
-  <footer id="contact">
+  <footer>
     <div class="footer-logo">Arenaria Design</div>
-    <p>Questions? Reach us at <a href="mailto:info@arenarya.com">info@arenarya.com</a></p>
-    <p class="copy">© 2026 Arenaria Design — ARENARIA LLC. All rights reserved.</p>
+    <p>© 2026 ARENARIA LLC. All rights reserved.</p>
   </footer>
 
 </body>
